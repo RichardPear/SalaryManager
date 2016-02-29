@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>人员管理</title>
+    <link href="materialize/css/materialize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/employee.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/font.css"/>
+
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">薪资管理系统</a>
+            <a href="#" data-activates="left-side" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#"><i class="material-icons left">face</i>欢迎您，XXX（系统管理员）</a> </li>
+                <li><a href="#">注销</a></li>
+            </ul>
+            <ul class="side-nav" id="left-side">
+                <li><a href="#"><i class="material-icons left">face</i>欢迎您，XXX（系统管理员）</a> </li>
+                <li><a href="#">注销</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="row">
+    <div class="col s12 m12 l3">
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <a href="info.html" class="collapsible-header">
+                    <i class="material-icons">volume_up</i>
+                    通知公告
+                    <span class="new" id="unreadMessages">1</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="collapsible-header active" id="organization">
+                    <i class="material-icons left shrink">view_list</i>
+                    组织架构管理
+                </a>
+                <div class="collapsible-body">
+                    <ul class="collection">
+                        <li class="collection-item">
+                            <a href="dept.html"><i class="material-icons left">list</i>部门管理</a>
+                        </li>
+                        <li class="collection-item">
+                            <a href="position.html"><i class="material-icons left">list</i>职位管理</a>
+                        </li>
+                        <li class="collection-item active">
+                            <a href="#"><i class="material-icons left">list</i>人员管理</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </li>
+            <li>
+                <a href="#" class="collapsible-header"><i class="material-icons">place</i>考勤管理</a>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+                <a href="#" class="collapsible-header"><i class="material-icons">place</i>薪资管理</a>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+                <a href="#" class="collapsible-header"><i class="material-icons">place</i>个人设置</a>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="col s12 m12 l9">
+        <div class="col s12 m12">
+            <div class="col s4">
+                <div class="input-field">
+                    <select>
+                        <option>--所有部门--</option>
+                        <option>市场部</option>
+                        <option>人事部</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="input-field">
+                    <select>
+                        <option>--所有职位--</option>
+                        <option>经理</option>
+                        <option>秘书</option>
+                    </select>
+                </div>
+            </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <i class="material-icons prefix">search</i>
+                        <input id="icon_prefix" type="text" placeholder="按姓名搜索">
+                    </div>
+
+
+                </div>
+        </div>
+        <h5>共有<span>1</span>条记录！</h5>
+        <div class="col s12">
+            <table class="centered">
+                <thead>
+                <th>
+                    <input type="checkbox" id="head-check" />
+                    <label for="head-check"></label>
+                </th>
+                <th>姓名</th>
+                <th>账号</th>
+                <th>密码</th>
+                <th>所在部门</th>
+                <th>职位</th>
+                <th>角色</th>
+                <th>操作</th>
+
+                </thead>
+                <tbody>
+                <tr class="unread-bg">
+                    <td>
+                        <input type="checkbox" id="td-1" />
+                        <label for="td-1"></label>
+                    </td>
+                    <td>张三</td>
+                    <td>XXX</td>
+                    <td>123456</td>
+                    <td>研发部</td>
+                    <td>C++攻城狮</td>
+                    <td>系统管理员</td>
+                    <td><a class="modal-trigger btn waves-effect waves-light" href="#modify-modal">修改</a></td>
+                </tr>
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="scripts/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.js"></script>
+<script type="text/javascript" src="scripts/init.js"></script>
+
+</body>
+</html>

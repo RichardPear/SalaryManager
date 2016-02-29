@@ -1,0 +1,29 @@
+ul.collapsible {
+    border: none;
+    box-shadow: none;
+    /*max-height: 200px;*/
+    /*overflow: auto;*/
+}
+.collapsible-body p {
+    padding: 10px;
+    text-indent: 2em;
+}
+.add-position-btn {
+    padding: 14px;
+}
+.modal label {
+    font-size: 20px;
+}
+.modal-footer {
+    text-align: center;
+}
+.modal .modal-footer button.btn {
+    float: none;
+}
+.pagination-wrap {
+    text-align: center;
+}
+.pagination1 {
+    width: 80%;
+    margin: 0 auto;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>materialize</title>
+    <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font.css"/>
+
+    <style type="text/css">
+        .login-form {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+        }
+        @media screen and (max-width: 768px) {
+            .login-form {
+                height: 50%;
+                width: 80%;
+            }
+        }
+        @media screen and (min-width: 769px ) and (max-width: 992px) {
+            .login-form {
+                height: 50%;
+                width: 40%;
+            }
+        }
+        @media screen and (min-width: 993px ) and (max-width: 1200px) {
+            .login-form {
+                height: 50%;
+                width: 30%;
+            }
+        }
+        @media screen and (min-width: 1201px ) {
+            .login-form {
+                height: 50%;
+                width: 30%;
+            }
+        }
+        #background {
+            z-index:-999;
+            position:fixed;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%
+        }
+        #background img {
+            width:100%;
+            height:100%;
+        }
+        .input-field label {
+            font-size: 1.5rem;
+        }
+        /* label focus color */
+        .input-field input[type=text]:focus + label,.input-field input[type=password]:focus + label {
+            color: #000000;
+            font-size: 1rem;
+        }
+        /* icon prefix focus color */
+        .input-field .prefix.active {
+            color: #0000FF;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="background">
+        <img src="images/36.jpg"/>
+    </div>
+    <form class="login-form" action="employee.html">
+        <div class="input-field">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="account" type="text" class="validate" required="true" maxlength="10">
+            <label for="account">Accout</label>
+        </div>
+        <div class="input-field">
+            <i class="material-icons prefix">vpn_key</i>
+            <input id="password" type="password" class="validate" required="true" maxlength="16">
+            <label for="password">Password</label>
+        </div>
+        <div class="center">
+            <button class="btn waves-effect waves-light" type="submit">登录
+                <i class="material-icons right">send</i>
+            </button>
+            <button class="btn waves-effect waves-light" type="reset">重置
+                <i class="material-icons right">replay</i>
+
+            </button>
+        </div>
+    </form>
+
+    <script src="scripts/jquery-1.11.1.js"></script>
+    <script src="materialize/js/materialize.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>通知公告</title>
+    <link href="materialize/css/materialize.css" rel="stylesheet" type="text/css">
+    <link href="css/info.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/font.css"/>
+
+
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">薪资管理系统</a>
+                <a href="#" data-activates="left-side" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#"><i class="material-icons left">face</i>欢迎您，XXX（系统管理员）</a> </li>
+                    <li><a href="#">注销</a></li>
+                </ul>
+                <ul class="side-nav" id="left-side">
+                    <li><a href="#"><i class="material-icons left">face</i>欢迎您，XXX（系统管理员）</a> </li>
+                    <li><a href="#">注销</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l3">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <a href="#" class="collapsible-header active">
+                        <i class="material-icons">volume_up</i>
+                        通知公告
+                        <span class="new" id="unreadMessages">1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="collapsible-header" id="organization">
+                        <i class="material-icons left shrink">view_list</i>
+                        组织架构管理
+                    </a>
+                    <div class="collapsible-body">
+                        <ul class="collection">
+                            <li class="collection-item">
+                                <a href="dept.html"><i class="material-icons left">list</i>部门管理</a>
+                            </li>
+                            <li class="collection-item">
+                                <a href="position.html"><i class="material-icons left">list</i>职位管理</a>
+                            </li>
+                            <li class="collection-item">
+                                <a href="employee.html"><i class="material-icons left">list</i>人员管理</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="#" class="collapsible-header"><i class="material-icons">place</i>考勤管理</a>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <a href="#" class="collapsible-header"><i class="material-icons">place</i>薪资管理</a>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <a href="#" class="collapsible-header"><i class="material-icons">place</i>个人设置</a>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="col s12 m12 l9">
+            <div>
+                <h5>共<span>5</span>条通知</h5>
+                <button type="button" class="btn waves-effect waves-light red">删除</button>
+                <button type="button" class="dropdown-button btn waves-effect waves-light blue" data-activates="read-state-list">
+                    标记为...<i class="material-icons right">arrow_drop_down</i>
+                </button>
+                <ul class="dropdown-content" id="read-state-list">
+                    <li class="read"><a href="javascript:void(0)">已读</a></li>
+                    <li class="unread"><a href="javascript:void(0)">未读</a></li>
+                </ul>
+            </div>
+            <table class="centered">
+                <thead>
+                <th>
+                    <input type="checkbox" id="head-check" />
+                    <label for="head-check"></label>
+                </th>
+                <th>时间</th>
+                <th>主题</th>
+                <th>发送者</th>
+                <th>接收者</th>
+                <th>操作</th>
+
+                </thead>
+                <tbody>
+                <tr class="unread-bg">
+                    <td>
+                        <input type="checkbox" id="td-1" />
+                        <label for="td-1"></label>
+                    </td>
+                    <td>2015/9/21 12:00:45</td>
+                    <td>放假通知</td>
+                    <td>小明（后勤管理员）</td>
+                    <td>XXX（系统管理员）</td>
+                    <td><a class="modal-trigger btn waves-effect waves-light" href="#specific-modal">阅读</a></td>
+                </tr>
+                <div class="modal modal-fixed-footer" id="specific-modal">
+                    <div class="modal-content">
+                        <div>
+                            <h5>放假通知</h5>
+                        </div>
+                        <p>中秋佳节来临，举国欢庆。公司放假时间为9月26日至9月27日,9月28日开始正常上下班，望各部门人员相互告知！</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn">朕已阅</a>
+                    </div>
+                </div>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="td-2" />
+                        <label for="td-2"></label>
+                    </td>
+                    <td>2015/9/21 12:00:45</td>
+                    <td>福利通知</td>
+                    <td>小红（财务管理员）</td>
+                    <td>XXX、路人甲、炮灰乙</td>
+                    <td><a class="modal-trigger btn waves-effect waves-light" href="#specific-modal">阅读</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="td-3" />
+                        <label for="td-3"></label>
+                    </td>
+                    <td>2015/9/21 12:00:45</td>
+                    <td>福利通知</td>
+                    <td>小红（财务管理员）</td>
+                    <td>全体人员</td>
+                    <td><a class="modal-trigger btn waves-effect waves-light" href="#specific-modal">阅读</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="td-4" />
+                        <label for="td-4"></label>
+                    </td>
+                    <td>2015/9/21 12:00:45</td>
+                    <td>福利通知</td>
+                    <td>小红（财务管理员）</td>
+                    <td>研发部</td>
+                    <td><a class="modal-trigger btn waves-effect waves-light" href="#specific-modal">阅读</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="td-5" />
+                        <label for="td-5"></label>
+                    </td>
+                    <td>2015/9/21 12:00:45</td>
+                    <td>福利通知</td>
+                    <td>隔壁老王（一般用户）</td>
+                    <td>研发部</td>
+                    <td><a class="modal-trigger btn waves-effect waves-light" href="#specific-modal">阅读</a></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="scripts/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.js"></script>
+    <!--<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>-->
+    <script type="text/javascript" src="scripts/init.js"></script>
+    <script type="text/javascript" src="scripts/info.js"></script>
+
+
+
+</body>
+</html>

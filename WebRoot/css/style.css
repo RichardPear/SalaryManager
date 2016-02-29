@@ -1,0 +1,45 @@
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+nav {
+    background:#00bcd4;
+}
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.new {
+    background: red;
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+}
+
+.collapsible .collapsible-body ul li {
+    padding: 10px;
+    text-indent:2rem;
+    border-bottom: none;
+}
+.collection .collection-item.active {
+    background: none;
+    font-size: 20px;
+}
+.collection .collection-item.active a {
+    color: blue;
+}
+
+.side-nav a {
+    padding: 0;
+}
+.side-nav i {
+    margin-right:0;
+}
+a.active {
+    background:#81d4fa;
+}
