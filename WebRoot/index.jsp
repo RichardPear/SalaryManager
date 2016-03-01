@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>欢迎使用薪资福利管理系统</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -27,7 +27,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <script src="assets/js/skins.min.js"></script>
   </head>
   
-  <body ng-app="app">
+  <body ng-app="app" ng-controller="indexController">
+  		<!-- ajax也有判断是否登录 -->
 		<%
 		if(session.getAttribute("user") == null || (String)session.getAttribute("user") == ""){
 			response.sendRedirect("login.jsp");
@@ -68,7 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <ul class="breadcrumb">
                     <li>
                         <i class="fa fa-home"></i>
-                        <a href="#">Home</a>
+                        <a href="#!">Home</a>
                     </li>
                     <li class="active">Dashboard</li>
                 </ul>
@@ -98,7 +99,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         		<!-- /页头 -->
         		<!--主视图-->
         		<div class="page-body">
-        			
+        			<div ui-view=""></div>
         		</div>
         		<!--/主视图-->
 	    	</div>
@@ -118,5 +119,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="assets/js/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="assets/js/ui-bootstrap-tpls-0.14.3.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/controller/indexController.js"></script>
   </body>
 </html>

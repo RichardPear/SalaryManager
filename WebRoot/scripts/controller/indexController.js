@@ -1,29 +1,24 @@
 app.controller('indexController', ['$rootScope', '$scope', function($rootScope, $scope) {
-    //$rootScope.serverUrl='server/serverList.html';
-    $scope.showInterface = function() {
-
-        $rootScope.interfaceViewUrl = './interface/interface-list.html';
-        $rootScope.currentModule = "接口管理";
-        $rootScope.currentOperation="";
-
-
+	//判断是否登录
+	$.get("isLogin.action");
+	//当前模块
+	var arr = location.href.split("/");
+	$rootScope.currentModule = arr[arr.length-1];
+	$scope.isOrganizeOpen = function(){
+		var currentModule = $rootScope.currentModule;
+		var flag = (currentModule=='department' || currentModule=='position' || currentModule=='employee');
+		return flag;
+	}
+    $scope.toHome = function() {
+    	$rootScope.currentModule = "home";
     };
-    $scope.showServer = function() {
-
-        $rootScope.serverUrl = './server/server-list.html';
-        $rootScope.currentModule = "服务器管理";
-        $rootScope.currentOperation="";
-
-
-    };
-
-
-
-     //package跳转
-    $scope.showPackage = function() {
-        $rootScope.packageURL = './package/package-normal.html';
-        $rootScope.currentModule = "软件包管理";
-        $rootScope.currentOperation="";
+    $scope.toDepartment = function(){
+    	$rootScope.currentModule = "department";
     }
-
+    $scope.toPosition = function(){
+    	$rootScope.currentModule = "position";
+    }
+    $scope.toEmployee = function(){
+    	$rootScope.currentModule = "employee";
+    }
 }])

@@ -67,6 +67,7 @@ public class UserAction extends ActionSupport{
 	)
 	public String logout(){
 		ActionContext.getContext().getSession().remove("user");
+		System.out.println("logout");
 		return "success";
 	}
 	@Action(value="/user/isUnique",
@@ -110,6 +111,20 @@ public class UserAction extends ActionSupport{
 		form.setStatus(1);
 		form.setMessage("Ìí¼Ó³É¹¦£¡");
 		this.setJson(JSONObject.fromObject(form).toString());
+		return "json";
+	}
+	@Action(value="/isLogin",
+			results={
+					@Result(type="json",name="json",params={"excludeProperties","json"}),
+					@Result(name="login",location="/login.jsp",type="redirect",params={"excludeProperties","json"}),
+				}
+	) 
+	public String isLogin(){
+		ActionContext context=ActionContext.getContext();
+		String str = (String)context.getSession().get("user");
+		if(str == null || str == ""){
+			return "login";
+		}
 		return "json";
 	}
 	

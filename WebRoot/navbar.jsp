@@ -5,12 +5,13 @@
             <div class="navbar-container">
                 <!-- Navbar Barnd -->
                 <div class="navbar-header pull-left">
-                    <a href="#" class="navbar-brand">
+                    <a href="index.jsp" class="navbar-brand">
                         <small>
-                            <img src="assets/img/logo.png" alt="" />
+                            <img src="assets/img/logo2.png" alt="" />
                             
                         </small>
                     </a>
+                    
                 </div>
                 <!-- /Navbar Barnd -->
 

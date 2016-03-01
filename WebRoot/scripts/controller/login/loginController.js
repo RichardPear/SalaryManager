@@ -1,6 +1,5 @@
 app.controller("loginController",["$scope","$http",function($scope,$http){
 		$scope.login = function(user){
-			
 			$.ajax({
 				url:  'login.action',
 				type: 'POST',
