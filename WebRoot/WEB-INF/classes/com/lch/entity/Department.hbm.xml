@@ -18,5 +18,19 @@
         <property name="name" type="java.lang.String">
             <column name="name" length="50" not-null="true" />
         </property>
+        <set name="users" inverse="true">
+            <key>
+                <column name="did">
+                    <comment>所在部门ID</comment>
+                </column>
+            </key>
+            <one-to-many class="com.lch.entity.User" />
+        </set>
+        <set name="positions" inverse="true">
+            <key>
+                <column name="did" />
+            </key>
+            <one-to-many class="com.lch.entity.Position" />
+        </set>
     </class>
 </hibernate-mapping>

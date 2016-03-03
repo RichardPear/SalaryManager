@@ -50,6 +50,7 @@ public class UserAction extends ActionSupport{
 			form.setMessage("µÇÂ¼³É¹¦£¡");
 			ActionContext context=ActionContext.getContext();
 			context.getSession().put("user", u.getUsername());
+			context.getSession().put("userId", u.getId());
 			this.setJson(JSONObject.fromObject(form).toString());
 			return "json";
 		}else{

@@ -10,7 +10,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('department', {
             url: '/department',
             templateUrl: 'department.jsp'
-
         })
         .state('position', {
             url: '/position',

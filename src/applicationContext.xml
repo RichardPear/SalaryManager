@@ -51,7 +51,10 @@
 		<property name="mappingResources">
 			<list>
 				<value>com/lch/entity/User.hbm.xml</value>
-				<value>com/lch/entity/Department.hbm.xml</value></list>
+				<value>com/lch/entity/Department.hbm.xml</value>
+				<value>com/lch/entity/NotiUser.hbm.xml</value>
+				<value>com/lch/entity/Notification.hbm.xml</value>
+				<value>com/lch/entity/Position.hbm.xml</value></list>
 		</property>
 	</bean>
 </beans>

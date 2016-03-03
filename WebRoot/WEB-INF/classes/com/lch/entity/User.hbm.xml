@@ -10,8 +10,13 @@
             <column name="id" />
             <generator class="native" />
         </id>
+        <many-to-one name="department" class="com.lch.entity.Department" fetch="select" lazy="false">
+            <column name="did">
+                <comment>所在部门ID</comment>
+            </column>
+        </many-to-one>
         <property name="username" type="java.lang.String">
-            <column name="username" length="50" not-null="true">
+            <column name="username" length="50" not-null="true" unique="true">
                 <comment>用户名，唯一</comment>
             </column>
         </property>
@@ -35,13 +40,22 @@
                 <comment>邮箱</comment>
             </column>
         </property>
-        <property name="pid" type="java.lang.Integer">
-            <column name="pid" not-null="true">
-                <comment>所在部门ID</comment>
-            </column>
-        </property>
         <property name="sex" type="java.lang.Integer">
             <column name="sex" not-null="true" />
         </property>
+        <set name="notifications" inverse="true">
+            <key>
+                <column name="create_id" not-null="true">
+                    <comment>发布者ID</comment>
+                </column>
+            </key>
+            <one-to-many class="com.lch.entity.Notification" />
+        </set>
+        <set name="notiUsers" inverse="true">
+            <key>
+                <column name="reader_id" />
+            </key>
+            <one-to-many class="com.lch.entity.NotiUser" />
+        </set>
     </class>
 </hibernate-mapping>

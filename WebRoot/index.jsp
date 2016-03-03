@@ -120,5 +120,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="assets/js/ui-bootstrap-tpls-0.14.3.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/controller/indexController.js"></script>
+    <script src="scripts/controller/home/homeController.js"></script>
   </body>
 </html>
