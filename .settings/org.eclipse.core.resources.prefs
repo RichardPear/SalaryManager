@@ -2,4 +2,5 @@ eclipse.preferences.version=1
 encoding//WebRoot/assets/css/beyond.min.css=UTF-8
 encoding//WebRoot/index.jsp=UTF-8
 encoding//WebRoot/navbar.jsp=UTF-8
+encoding//src/com/lch/util/DateJsonValueProcessor.java=UTF-8
 encoding/WebRoot=UTF-8
